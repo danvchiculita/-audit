@@ -1,815 +1,137 @@
-/* =========================
-   Boost Retail | Audit Landing
-   Executive-clean, aerisit, paleta navy + orange
-========================= */
-
-:root{
-  --bg: #ffffff;
-  --bg-alt:#f6f7f9;
-
-  --text:#0b1220;
-  --muted:#5b667a;
-
-  --navy:#0b1f3a;
-  --navy-2:#102a4a;
-
-  --orange:#ff6a2b;
-  --orange-2:#ff7a42;
-
-  --card:#ffffff;
-  --line:#e7ebf2;
-
-  --shadow: 0 12px 30px rgba(11,18,32,.08);
-  --shadow-soft: 0 10px 24px rgba(11,18,32,.06);
-
-  --radius:16px;
-  --radius2:22px;
-
-  --container: 1120px;
-}
-
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.5;
-}
-
-a{ color:inherit; text-decoration:none; }
-a:hover{ text-decoration:underline; }
-
-.container{
-  width:min(var(--container), calc(100% - 48px));
-  margin:0 auto;
-}
-
-.muted{ color:var(--muted); }
-.small{ font-size:12.5px; }
-strong{ color:var(--text); }
-
-.divider{
-  height:1px;
-  background:var(--line);
-  margin:14px 0;
-}
-
-/* =========================
-   Buttons
-========================= */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:10px 14px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  font-weight:700;
-  font-size:14px;
-  cursor:pointer;
-  text-decoration:none !important;
-  background:#fff;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-  box-shadow:none;
-}
-
-.btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 18px rgba(11,18,32,.08); }
-.btn:active{ transform: translateY(0); box-shadow:none; }
-
-.btn-primary{
-  background:var(--navy);
-  border-color:transparent;
-  color:#fff;
-}
-.btn-primary:hover{ background:var(--navy-2); }
-
-.btn-ghost{
-  background:#fff;
-  border-color:var(--line);
-  color:var(--navy);
-}
-
-/* =========================
-   Header
-========================= */
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255,255,255,.92);
-  backdrop-filter: blur(8px);
-  border-bottom:1px solid var(--line);
-}
-
-.header-inner{
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-.brand-dot{
-  width:10px; height:10px;
-  border-radius:999px;
-  background:var(--orange);
-  box-shadow: 0 0 0 4px rgba(255,106,43,.14);
-}
-.brand-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
-}
-.brand-sub{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:2px;
-}
-.header-actions{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-/* =========================
-   Hero
-========================= */
-.hero{
-  padding:56px 0 26px;
-  background:
-    radial-gradient(700px 280px at 25% 20%, rgba(255,106,43,.12), transparent 60%),
-    radial-gradient(900px 340px at 80% 10%, rgba(11,31,58,.08), transparent 60%),
-    #fff;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap:26px;
-  align-items:start;
-}
-
-.eyebrow{
-  font-size:12px;
-  letter-spacing:.14em;
-  color:var(--muted);
-  text-transform:uppercase;
-  margin-bottom:10px;
-}
-
-.hero-title{
-  font-size:52px;
-  line-height:1.02;
-  margin:0 0 16px;
-  letter-spacing:-.02em;
-}
-.hero-title span{ display:block; }
-.hero-title .t2{ padding-left: 42px; }
-.hero-title .t3{ padding-left: 84px; }
-
-.hero-lead{
-  margin:0 0 14px;
-  color:var(--muted);
-  max-width:62ch;
-}
-
-.hero-proof{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-  background:rgba(255,255,255,.72);
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  padding:14px 14px;
-  box-shadow: var(--shadow-soft);
-  margin: 14px 0 16px;
-}
-.proof-bar{
-  width:4px;
-  border-radius:999px;
-  background: linear-gradient(180deg, var(--orange), rgba(255,106,43,.35));
-  flex:0 0 auto;
-  margin-top:2px;
-}
-.hero-proof p{
-  margin:0;
-  font-size:14px;
-  color:var(--muted);
-}
-.hero-proof strong{ color:var(--navy); }
-
-.hero-cta{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  flex-wrap:wrap;
-  margin-bottom:10px;
-}
-
-.hero-meta{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:8px;
-}
-.hero-meta span{
-  font-size:12px;
-  color:var(--muted);
-  border:1px solid var(--line);
-  background:#fff;
-  padding:6px 10px;
-  border-radius:999px;
-}
-
-.hero-side{
-  position:relative;
-}
-.hero-panel{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.82);
-  border-radius: var(--radius2);
-  box-shadow: var(--shadow);
-  padding:16px;
-}
-.panel-top{
-  margin-bottom:12px;
-}
-.panel-kicker{
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--muted);
-}
-.panel-title{
-  font-size:18px;
-  font-weight:800;
-  color:var(--navy);
-  margin-top:4px;
-}
-.panel-list{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin: 12px 0;
-}
-.panel-item{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-}
-.dot{
-  width:10px; height:10px;
-  border-radius:999px;
-  margin-top:6px;
-  flex:0 0 auto;
-}
-.dot-orange{ background:var(--orange); box-shadow:0 0 0 4px rgba(255,106,43,.12); }
-.dot-navy{ background:var(--navy); box-shadow:0 0 0 4px rgba(11,31,58,.10); }
-.dot-gray{ background:#9aa3b2; box-shadow:0 0 0 4px rgba(154,163,178,.12); }
-
-.pi-title{ font-weight:800; font-size:14px; }
-.pi-text{ color:var(--muted); font-size:13px; }
-
-.panel-note{
-  font-size:13px;
-  color:var(--muted);
-  border-top:1px solid var(--line);
-  padding-top:12px;
-}
-.panel-note strong{ color:var(--navy); }
-
-/* =========================
-   Sections
-========================= */
-.section{
-  padding:46px 0;
-}
-.section-alt{
-  background:var(--bg-alt);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-
-.section-head{
-  max-width: 860px;
-  margin-bottom:18px;
-}
-.section-head h2{
-  font-size:34px;
-  margin:0 0 8px;
-  letter-spacing:-.02em;
-}
-.section-head .accent{ color:var(--orange); }
-.section-head p{ margin:0; }
-
-.breathe{
-  margin-top:18px;
-}
-
-.two-col{
-  display:grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap:18px;
-  align-items:start;
-}
-
-/* =========================
-   Cards
-========================= */
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius: var(--radius2);
-  padding:18px;
-  box-shadow: var(--shadow-soft);
-}
-.card-soft{
-  background: rgba(255,255,255,.92);
-}
-
-.card-title{
-  margin:0 0 8px;
-  font-size:16px;
-  font-weight:900;
-  color:var(--navy);
-}
-
-.bullets{
-  margin:10px 0 0;
-  padding-left:18px;
-  color:var(--muted);
-}
-.bullets li{ margin:8px 0; }
-
-.strong{ font-weight:700; }
-
-/* Bridge / Quote */
-.bridge{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.bridge-top{ margin:0; color:var(--muted); }
-.bridge-bottom{ margin:0; color:var(--muted); }
-
-.quote{
-  margin:0;
-  padding:18px 18px;
-  border:1px solid var(--line);
-  border-radius: var(--radius2);
-  background:#fff;
-  box-shadow: var(--shadow-soft);
-}
-.quote p{
-  margin:0 0 8px;
-  font-size:18px;
-  font-weight:900;
-  color:var(--navy);
-}
-.quote cite{
-  font-style:normal;
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* =========================
-   6 Cards
-========================= */
-.cards-6{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap:14px;
-  margin-top:16px;
-}
-.pill-card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius: var(--radius2);
-  padding:18px;
-  box-shadow: var(--shadow-soft);
-}
-.pill-card h3{
-  margin:10px 0 6px;
-  font-size:16px;
-  font-weight:900;
-  color:var(--navy);
-}
-.pill-card p{
-  margin:0;
-  color:var(--muted);
-  font-size:13.5px;
-}
-
-.icon{
-  width:44px; height:44px;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid var(--line);
-}
-.icon svg{
-  width:22px; height:22px;
-  color:var(--navy);
-}
-.i-orange{
-  background: rgba(255,106,43,.12);
-  border-color: rgba(255,106,43,.25);
-}
-.i-orange svg{ color: var(--orange); }
-.i-navy{
-  background: rgba(11,31,58,.10);
-  border-color: rgba(11,31,58,.18);
-}
-.i-navy svg{ color: var(--navy); }
-
-/* =========================
-   Process + Timeline
-========================= */
-.process-wrap{
-  margin-top:14px;
-}
-
-.timeline{
-  position:relative;
-  padding: 6px 0 8px;
-}
-.timeline:before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:linear-gradient(180deg, rgba(11,31,58,.18), rgba(255,106,43,.16));
-  transform:translateX(-50%);
-}
-
-.t-row{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:18px;
-  margin: 14px 0;
-}
-.t-row.left .t-card{ grid-column:1; }
-.t-row.right .t-card{ grid-column:2; }
-
-.t-card{
-  position:relative;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius: var(--radius2);
-  padding:16px 16px 16px 16px;
-  box-shadow: var(--shadow-soft);
-}
-.t-card:before{
-  content:"";
-  position:absolute;
-  top:20px;
-  width:10px; height:10px;
-  border-radius:999px;
-  background:var(--orange);
-  box-shadow: 0 0 0 5px rgba(255,106,43,.12);
-}
-.t-row.left .t-card:before{ right:-28px; }
-.t-row.right .t-card:before{ left:-28px; }
-
-.t-badge{
-  display:inline-flex;
-  width:28px; height:28px;
-  border-radius:10px;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  background: rgba(11,31,58,.10);
-  color: var(--navy);
-  border:1px solid rgba(11,31,58,.16);
-  margin-bottom:10px;
-}
-.t-card h3{
-  margin:0 0 6px;
-  font-size:16px;
-  font-weight:900;
-  color:var(--navy);
-}
-.t-card p{
-  margin:0;
-  color:var(--muted);
-}
-
-.deliverables-grid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap:14px;
-  margin-top:18px;
-}
-
-.check{
-  list-style:none;
-  padding:0;
-  margin:10px 0 0;
-}
-.check li{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  margin:10px 0;
-  color:var(--muted);
-}
-.chk{
-  width:10px; height:10px;
-  border-radius:999px;
-  background: var(--orange);
-  box-shadow: 0 0 0 4px rgba(255,106,43,.12);
-  margin-top:7px;
-  flex:0 0 auto;
-}
-
-.process-quote{
-  margin-top:16px;
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius: var(--radius2);
-  padding:14px 16px;
-  box-shadow: var(--shadow-soft);
-}
-.process-quote p{
-  margin:0;
-  color:var(--muted);
-}
-.process-quote strong{ color:var(--navy); }
-
-/* =========================
-   Survival
-========================= */
-.survival-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:14px;
-  margin-top:16px;
-}
-
-.survival-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-.survival-list li{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-}
-.s-dot{
-  width:10px; height:10px;
-  border-radius:999px;
-  background: var(--navy);
-  box-shadow: 0 0 0 4px rgba(11,31,58,.10);
-  margin-top:7px;
-  flex:0 0 auto;
-}
-
-.callout{
-  margin-top:16px;
-  background: rgba(255,255,255,.92);
-  border:1px solid var(--line);
-  border-radius: var(--radius2);
-  padding:14px 16px;
-  box-shadow: var(--shadow-soft);
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-}
-.callout-bar{
-  width:4px;
-  border-radius:999px;
-  background: linear-gradient(180deg, var(--navy), rgba(11,31,58,.25));
-  margin-top:2px;
-}
-.callout p{ margin:0; color:var(--muted); }
-.callout strong{ color:var(--navy); }
-
-/* =========================
-   Form
-========================= */
-.form-shell{
-  margin-top:16px;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius: var(--radius2);
-  box-shadow: var(--shadow);
-  padding:18px;
-}
-
-.lead-form label{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  font-size:13px;
-  color:var(--muted);
-}
-.lead-form input,
-.lead-form textarea{
-  width:100%;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:12px 12px;
-  font-size:14px;
-  outline:none;
-  background:#fff;
-  color:var(--text);
-}
-.lead-form input:focus,
-.lead-form textarea:focus{
-  border-color: rgba(255,106,43,.45);
-  box-shadow: 0 0 0 4px rgba(255,106,43,.10);
-}
-
-.grid-2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:12px;
-}
-
-.form-block{ margin-top:14px; }
-.form-label{
-  font-weight:900;
-  color:var(--navy);
-  font-size:13px;
-  margin-bottom:10px;
-}
-
-.checks-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:10px;
-}
-
-.checkline{
-  display:flex !important;
-  flex-direction:row !important;
-  align-items:center;
-  gap:10px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:10px 12px;
-  background: rgba(11,31,58,.03);
-}
-.checkline input{
-  width:16px;
-  height:16px;
-  accent-color: var(--orange);
-}
-
-.form-actions{
-  margin-top:14px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
-}
-.form-privacy{
-  margin-top:10px;
-}
-
-/* =========================
-   Footer
-========================= */
-.site-footer{
-  border-top:1px solid var(--line);
-  padding:22px 0;
-  background:#fff;
-}
-.footer-inner{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:16px;
-}
-.footer-right{
-  display:flex;
-  gap:14px;
-  align-items:center;
-}
-
-/* =========================
-   Modal (Exit popup)
-========================= */
-.modal-backdrop{
-  position:fixed;
-  inset:0;
-  background: rgba(11,18,32,.55);
-  opacity:0;
-  pointer-events:none;
-  transition: opacity .18s ease;
-  z-index:200;
-}
-.modal-backdrop.is-open{
-  opacity:1;
-  pointer-events:auto;
-}
-
-.modal{
-  position:fixed;
-  left:50%;
-  top:50%;
-  transform: translate(-50%, -48%);
-  width:min(560px, calc(100% - 28px));
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius: 22px;
-  box-shadow: 0 22px 60px rgba(11,18,32,.28);
-  opacity:0;
-  pointer-events:none;
-  transition: opacity .18s ease, transform .18s ease;
-  z-index:210;
-}
-.modal.is-open{
-  opacity:1;
-  pointer-events:auto;
-  transform: translate(-50%, -50%);
-}
-.modal-inner{
-  padding:18px 18px 16px;
-}
-.modal-kicker{
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:6px;
-}
-.modal h3{
-  margin:0 0 10px;
-  font-size:20px;
-  letter-spacing:-.01em;
-  color:var(--navy);
-}
-.modal-actions{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:12px;
-}
-.modal-close{
-  position:absolute;
-  right:10px;
-  top:8px;
-  width:34px;
-  height:34px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:#fff;
-  cursor:pointer;
-  font-size:18px;
-  line-height:1;
-}
-
-/* =========================
-   Responsive
-========================= */
-@media (max-width: 980px){
-  .hero-grid{ grid-template-columns: 1fr; }
-  .hero-title{ font-size:44px; }
-  .hero-title .t2{ padding-left: 28px; }
-  .hero-title .t3{ padding-left: 56px; }
-
-  .two-col{ grid-template-columns: 1fr; }
-  .cards-6{ grid-template-columns: 1fr; }
-  .deliverables-grid{ grid-template-columns: 1fr; }
-  .survival-grid{ grid-template-columns: 1fr; }
-
-  .timeline:before{ left:14px; transform:none; }
-  .t-row{ grid-template-columns: 1fr; }
-  .t-row.left .t-card,
-  .t-row.right .t-card{ grid-column:1; }
-  .t-card{ padding-left:16px; }
-  .t-card:before{ left:-28px !important; right:auto !important; }
-
-  .grid-2{ grid-template-columns: 1fr; }
-  .checks-grid{ grid-template-columns: 1fr; }
-}
-
-@media (max-width: 520px){
-  .container{ width: calc(100% - 28px); }
-  .hero{ padding-top:44px; }
-  .hero-title{ font-size:36px; }
-  .hero-title .t2{ padding-left: 18px; }
-  .hero-title .t3{ padding-left: 36px; }
-  .header-inner{ height:62px; }
-  .brand-sub{ display:none; }
-}
+<header>
+        <div style="display: flex; align-items: center;">
+            <a href="#" class="brand-name">Dan Chiculiță</a>
+            <div class="logo-dde">DIAGNOSTIC. DECIZIE. EXECUȚIE.</div>
+        </div>
+        <a href="https://linkedin.com/in/danchiculita" target="_blank" style="color:white; text-decoration:none; font-weight:600; border:1px solid rgba(255,255,255,0.3); padding:8px 20px; border-radius:4px;">LinkedIn</a>
+    </header>
+
+    <section id="hero-section">
+        <div class="hero-titles">
+            <p style="font-weight:700; font-size:1.3rem; margin-bottom:25px;">Ai întors business-ul pe toate părțile și totuși cifrele nu se aliniază?</p>
+            <h1 class="quote">“You can’t see the label from inside the bottle.”</h1>
+            <p style="font-weight:700; font-size:1.25rem; max-width:850px; margin:40px auto 0;">Auditul meu nu vine să te învețe meseria ta, ci aplică rigoarea comercială a retailerului asupra propriului tău model de vânzare.</p>
+        </div>
+    </section>
+
+    <section class="zona-tripartita">
+        <div class="bg-white">
+            <h2>Multe companii intră în retail cu încredere. <br><span style="font-weight: 400; color: #666;">Puține cu o structură validată.</span></h2>
+        </div>
+        <div class="bg-navy">
+            <div class="grid-riscuri">
+                <div class="card-risc"><h4>Eroziunea Profitului</h4><p>Cifra de afaceri crește, dar profitul net este „înghițit” de costuri.</p></div>
+                <div class="card-risc"><h4>Promoții în Gol</h4><p>Rulezi marfă, dar subvenționezi pierderi în loc să aduci rotație.</p></div>
+                <div class="card-risc"><h4>Presiune Comercială</h4><p>Termeni acceptați sub presiune, fără simulare de impact.</p></div>
+                <div class="card-risc"><h4>Expunere Critică</h4><p>Vulnerabilitate pe private label sau pe un singur lanț.</p></div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <p style="font-size: 1.2rem; font-weight: 700; margin-bottom: 30px;">Audit Comercial Express izolează semnalele de profit în 90 de minute.</p>
+            <a href="#contact" style="display: inline-block; background: var(--accent-gold); color: black; padding: 18px 45px; text-decoration: none; font-weight: 800; border-radius: 4px;">SOLICITĂ DIAGNOSTIC</a>
+        </div>
+    </section>
+
+    <section id="piloni">
+        <h2 style="font-family:'Playfair Display'; color:var(--navy-deep); font-size: 2.2rem;">Analiză strategică pe 6 puncte de verificare critică</h2>
+        <div class="piloni-grid">
+            <div class="pilon-box"><h4>01. Profitabilitate Netă</h4><p>Analiza marjei reale după toate taxele comerciale.</p></div>
+            <div class="pilon-box"><h4>02. Eficiență Promo</h4><p>Calculul ROI pentru acțiunile din catalog și raft.</p></div>
+            <div class="pilon-box"><h4>03. Structură Portofoliu</h4><p>Produse „ancoră” versus consumatoare de capital.</p></div>
+            <div class="pilon-box"><h4>04. Dinamică la Raft</h4><p>Viteza de rotație și frecvența aprovizionării.</p></div>
+            <div class="pilon-box"><h4>05. Expunere Brand</h4><p>Vizibilitatea în fața consumatorului vs cost listare.</p></div>
+            <div class="pilon-box"><h4>06. Plan de Manevră</h4><p>Strategii de re-negociere sau optimizare portofoliu.</p></div>
+        </div>
+    </section>
+
+    <section id="foaie-parcurs">
+        <h2 style="text-align:center; font-family:'Playfair Display'; color:var(--accent-gold); margin-bottom:60px; font-size: 2.3rem;">Foaia de Parcurs & Livrabilul</h2>
+        <div class="timeline-flex">
+            <div class="timeline-steps">
+                <div class="timeline-step"><h3>1. Clarificare (15 min)</h3><p>Validăm dacă auditul răspunde nevoilor tale.</p></div>
+                <div class="timeline-step"><h3>2. Audit Express (90 min)</h3><p>Analiză intensă a structurii comerciale.</p></div>
+                <div class="timeline-step"><h3>3. Raport Diagnostic</h3><p>Livrarea strategiei de manevră.</p></div>
+            </div>
+            <div class="livrabile-list">
+                <p><strong>✓ Indicatori de Risc</strong> (Cod culori zone critice)</p>
+                <p><strong>✓ Matricea de Impact</strong> (Consecințe pe 6 luni)</p>
+                <p><strong>✓ 3 Decizii Recomandate</strong> (Securizarea marjei)</p>
+            </div>
+        </div>
+        <div style="max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div style="border: 1px solid #2ecc71; padding: 20px; font-size: 0.9rem;"><strong>● PENTRU CINE:</strong> Companii ce vor claritate înainte de negocieri.</div>
+            <div style="border: 1px solid #e74c3c; padding: 20px; font-size: 0.9rem;"><strong>● NU PENTRU:</strong> Cei ce caută confirmări confortabile.</div>
+        </div>
+        <p style="text-align: center; margin-top: 50px; font-style: italic; font-weight: 700; font-size: 1.2rem; color: white;">
+            „Nu garantez listări. Garantez claritatea de a nu semna un contract care îți pune în pericol afacerea.”
+        </p>
+    </section>
+
+    <section id="fibonacci" style="padding: 120px 5%; background: var(--bg-dark); color: white; position: relative; text-align: center;">
+        <svg style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 850px; opacity: 0.15;" viewBox="0 0 100 62" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,61.8 A61.8,61.8 0 0,1 61.8,0 A38.2,38.2 0 0,1 100,38.2 A23.6,23.6 0 0,1 76.4,61.8 A14.6,14.6 0 0,1 61.8,47.2" fill="none" stroke="#d4af37" stroke-width="0.3"/>
+        </svg>
+        <div style="position: relative; z-index: 10; max-width: 800px; margin: 0 auto;">
+            <h2 style="color:var(--accent-gold); margin-bottom: 30px; letter-spacing: 2px;">RETAIL SURVIVAL STRATEGY</h2>
+            <div style="margin-bottom: 50px; text-align: left; border-left: 2px solid var(--accent-gold); padding-left: 25px;">
+                <h3 style="margin-bottom: 15px;">Când reducerea costurilor slăbește capacitatea de vânzare.</h3>
+                <p style="font-size: 0.95rem; opacity: 0.9; line-height: 1.7;">
+                    În perioade de incertitudine economică, instinctul este reducerea imediată a costurilor administrative. Însă tăierile liniare pot genera costuri ascunse pe termen lung. Evaluăm împreună dacă planul de criză protejează activele reale sau accelerează un declin invizibil:
+                </p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                <div class="fib-box-asym" style="width: 100%; max-width: 500px; text-align: left;">
+                    <strong>Vulnerabilitatea Teritoriului</strong>
+                    <p>Unde este „punctul de rupere” în care scăderea frecvenței la raft devine invitație oficială pentru concurență?</p>
+                </div>
+                <div class="fib-box-asym" style="width: 100%; max-width: 500px; text-align: left;">
+                    <strong>Capacitatea de Execuție</strong>
+                    <p>Care este costul detaliilor de profit care se pierd atunci când echipa trece pe un regim strict de supraviețuire?</p>
+                </div>
+                <div class="fib-box-asym" style="width: 100%; max-width: 500px; text-align: left;">
+                    <strong>Costul Recuperării</strong>
+                    <p>Este economia de azi mai mare decât investiția necesară pentru a recâștiga poziția pierdută peste 12 luni?</p>
+                </div>
+            </div>
+            <p style="margin-top: 50px; font-size: 1.1rem; font-weight: 600; font-style: italic; color: var(--accent-gold);">
+                Nu oferim doar consultanță, ci livrăm matematica supraviețuirii. Ne asigurăm că măsurile de azi nu devin o „notă de plată” imposibil de achitat mâine.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" style="padding: 100px 5%; text-align: center;">
+        <div class="form-container">
+            <h2 style="font-family:'Playfair Display'; margin-bottom: 10px;">Solicitare Diagnostic</h2>
+            <p style="font-size: 0.95rem; line-height: 1.5; color: #444; margin-bottom: 30px; font-weight: 600;">
+                Acest audit necesită curaj comercial. Dacă preferi confirmări confortabile în locul adevărului din cifre, acest proces nu este pentru tine. Este pentru tine dacă vrei să știi exact unde te afli înainte de următoarea decizie majoră.
+            </p>
+            
+            <form>
+                <div class="form-grid">
+                    <input type="text" placeholder="Nume" style="padding:12px; border:1px solid #ddd;">
+                    <input type="email" placeholder="Email" style="padding:12px; border:1px solid #ddd;">
+                </div>
+                <div class="checklist">
+                    <label><input type="checkbox"> Marja netă scade</label>
+                    <label><input type="checkbox"> Promoții ineficiente</label>
+                    <label><input type="checkbox"> Termeni sub presiune</label>
+                    <label><input type="checkbox"> Cash-flow blocat</label>
+                    <label><input type="checkbox"> Dependență private label</label>
+                    <label><input type="checkbox"> Lipsă simulare impact</label>
+                </div>
+                <button type="submit" style="width:100%; padding:18px; background:var(--accent-gold); border:none; font-weight:800; cursor:pointer;">TRIMITE SOLICITAREA</button>
+            </form>
+            <p style="font-size: 0.75rem; margin-top: 20px; color: #888;">✔ Răspund 24-48h | ✔ Confidențialitate NDA | ✔ Fără obligații</p>
+        </div>
+    </section>
+
+    <footer>
+        <div><strong>Dan Chiculiță</strong><br><span style="font-size:0.75rem; opacity:0.6;">DIAGNOSTIC. DECIZIE. EXECUȚIE.</span></div>
+        <div style="display:flex; align-items:center; gap:20px;">
+            <p style="font-size:0.7rem; opacity:0.6;">Protocol: Confidențialitate 100% prin NDA.</p>
+            <svg class="shield-svg" viewBox="0 0 100 120"><path d="M50,5 L90,20 L90,60 C90,90 50,115 50,115 C50,115 10,90 10,60 L10,20 Z" fill="none" stroke="#d4af37" stroke-width="4"/><path d="M50,5 L50,60 L10,60 L10,20 Z" fill="#d4af37"/><path d="M50,60 L90,60 L90,85 C82,98 50,115 50,115 Z" fill="#d4af37"/></svg>
+        </div>
+    </footer>
+
+</body>
+</html>
