@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Commercial Express Audit | Dan Chiculiță</title>
+  <title>Commercial Express Diagnostic | Dan Chiculiță</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -57,7 +57,7 @@
     .section-lead {
       font-size: 1.04rem;
       color: var(--text-gray);
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
@@ -110,7 +110,6 @@
       background: rgba(255,255,255,0.05);
     }
 
-    /* HEADER */
     header {
       position: absolute;
       width: 100%;
@@ -165,7 +164,6 @@
       border-color: rgba(255,255,255,0.5);
     }
 
-    /* HERO */
     #hero-section {
       min-height: 100vh;
       background:
@@ -201,9 +199,9 @@
     }
 
     .hero-subtitle {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      font-size: clamp(1.05rem, 2vw, 1.26rem);
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
       font-weight: 700;
       line-height: 1.6;
       color: #f1f5f9;
@@ -224,7 +222,29 @@
       font-weight: 500;
     }
 
-    /* INTRO STRIP */
+    .promise-strip {
+      padding: 58px 20px;
+      background: #ffffff;
+      text-align: center;
+      border-bottom: 1px solid rgba(10,25,47,0.06);
+    }
+
+    .promise-strip strong {
+      display: block;
+      font-size: 1.16rem;
+      line-height: 1.6;
+      color: var(--navy-deep);
+      max-width: 900px;
+      margin: 0 auto 12px;
+    }
+
+    .promise-strip p {
+      font-size: 1rem;
+      color: var(--text-gray);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
     .triptych {
       text-align: center;
     }
@@ -293,9 +313,11 @@
       font-weight: 800;
       margin-bottom: 28px;
       color: var(--navy-deep);
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* CRITICAL CHECKPOINTS */
     #critical-points {
       padding: 110px 20px;
       background: var(--pearl-white);
@@ -332,7 +354,6 @@
       font-size: 0.98rem;
     }
 
-    /* ROADMAP */
     #roadmap {
       padding: 110px 20px;
       background: var(--navy-deep);
@@ -423,7 +444,6 @@
       margin-right: auto;
     }
 
-    /* SURVIVAL STRATEGY */
     #survival-strategy {
       padding: 120px 20px;
       background: var(--bg-dark);
@@ -515,7 +535,6 @@
       margin-right: auto;
     }
 
-    /* CONTACT */
     #contact {
       padding: 110px 20px;
       text-align: center;
@@ -621,7 +640,6 @@
       color: #5f6874;
     }
 
-    /* FOOTER */
     footer {
       padding: 36px 20px;
       background: #02050a;
@@ -664,7 +682,6 @@
       fill: var(--accent-gold);
     }
 
-    /* EXIT POPUP */
     #exitPopup {
       display: none;
       position: fixed;
@@ -716,7 +733,6 @@
       margin-bottom: 22px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 980px) {
       .risk-grid,
       .points-grid {
@@ -778,15 +794,21 @@
         padding-top: 72px;
         padding-bottom: 72px;
       }
+
+      .promise-strip {
+        padding-top: 42px;
+        padding-bottom: 42px;
+      }
     }
   </style>
 </head>
 <body>
-<div style="position:absolute; top:20px; right:20px; z-index:999;">
-  <a href="index_ro.html" style="color:white; font-weight:600; text-decoration:none;">
-    RO
-  </a>
-</div>
+  <div style="position:absolute; top:20px; right:20px; z-index:999;">
+    <a href="index_ro.html" style="color:white; font-weight:600; text-decoration:none;">
+      RO
+    </a>
+  </div>
+
   <header>
     <div class="header-inner">
       <div class="brand-wrap">
@@ -799,19 +821,30 @@
 
   <section id="hero-section">
     <div class="hero-inner">
-      <div class="eyebrow">Commercial Express Audit · 90 Minutes</div>
-      <p class="hero-kicker">You have analyzed the business from every angle. And still the numbers don’t align.</p>
-      <h1 class="hero-quote">“You can’t see the label from inside the bottle.”</h1>
+      <div class="eyebrow">Commercial Express Diagnostic</div>
+      <p class="hero-kicker">When sales move, but profit, visibility, or control do not, the problem is usually structural.</p>
+      <h1 class="hero-quote">Clarity before the next commercial mistake.</h1>
       <p class="hero-subtitle">
-        This audit does not try to teach you your business. It applies the retailer’s commercial discipline to your own sales model, so you can see where profit is diluted, where assumptions are dangerous, and where the next decision must be made with more rigor.
+        A focused commercial diagnostic designed to isolate the structural issue behind margin erosion, inefficient promotions, weak retail execution, or fragile listing logic — before it becomes more expensive.
       </p>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Request a 90-minute diagnostic</a>
-        <a href="#critical-points" class="btn-secondary">See what the audit checks</a>
+        <a href="#contact" class="btn-primary">Request the diagnostic</a>
+        <a href="#critical-points" class="btn-secondary">See what it checks</a>
       </div>
 
-      <div class="hero-note">For suppliers, commercial leaders, founders, and decision-makers who need clarity before the next major move.</div>
+      <div class="hero-note">For FMCG suppliers, founders, and commercial leaders who need a sharper reading before negotiation, expansion, or corrective action.</div>
+    </div>
+  </section>
+
+  <section class="promise-strip">
+    <div class="container">
+      <strong>
+        Commercial Express Diagnostic is a focused intervention built around one concrete commercial issue — before it becomes more expensive.
+      </strong>
+      <p>
+        It is the point of clarity that shows whether the issue requires a full commercial audit or a targeted intervention.
+      </p>
     </div>
   </section>
 
@@ -845,35 +878,35 @@
     </div>
 
     <div class="triptych-bottom">
-      <p>The Commercial Express Audit isolates the real profit signals in 90 focused minutes.</p>
-      <a href="#contact" class="btn-primary">Start with a focused diagnostic</a>
+      <p>The Commercial Express Diagnostic isolates the real commercial pressure points before they turn into larger margin, execution, or negotiation problems.</p>
+      <a href="#contact" class="btn-primary">Start the diagnostic</a>
     </div>
   </section>
 
   <section id="critical-points">
     <div class="container">
       <div class="eyebrow">6 Critical Checkpoints</div>
-      <h2 class="section-title">A strategic audit built around the decisions that matter most</h2>
+      <h2 class="section-title">A focused diagnostic built around the decisions that matter most</h2>
       <p class="section-lead">
-        This is not a generic review. It is a commercial diagnostic designed to test the structural strength of your retail model before negotiations, expansion, escalation, or deeper investment.
+        This is not a generic review. It is a commercial diagnostic designed to test the structural strength of your retail model before negotiation, expansion, escalation, or deeper investment.
       </p>
 
       <div class="points-grid">
         <div class="point-box">
           <h4>01. Net Profitability</h4>
-          <p>We assess real commercial margin after all fees, discounts, and cost leakages—not just the visible top line.</p>
+          <p>We assess real commercial margin after all fees, discounts, and cost leakages — not just the visible top line.</p>
         </div>
         <div class="point-box">
           <h4>02. Promotional Efficiency</h4>
-          <p>We test whether catalog and shelf promotions create profitable movement or simply subsidize volume without real return.</p>
+          <p>We test whether promotions create profitable movement or simply subsidize volume without real return.</p>
         </div>
         <div class="point-box">
           <h4>03. Portfolio Structure</h4>
-          <p>We separate strategic “locomotive” SKUs from products that consume capital, dilute focus, or weaken negotiation leverage.</p>
+          <p>We separate strategic SKUs from products that consume capital, dilute focus, or weaken negotiation leverage.</p>
         </div>
         <div class="point-box">
           <h4>04. Shelf Dynamics</h4>
-          <p>We examine rotation, frequency, replenishment rhythm, and the operational friction that undermines sales performance.</p>
+          <p>We examine rotation, replenishment rhythm, and the operational friction that quietly undermines sales performance.</p>
         </div>
         <div class="point-box">
           <h4>05. Brand Exposure</h4>
@@ -890,37 +923,37 @@
   <section id="roadmap">
     <div class="container">
       <div class="roadmap-head">
-        <div class="eyebrow">Roadmap & Deliverable</div>
-        <h2 class="section-title">What happens in practice</h2>
+        <div class="eyebrow">How It Works</div>
+        <h2 class="section-title">How the diagnostic works in practice</h2>
       </div>
 
       <div class="roadmap-wrap">
         <div class="timeline">
           <div class="timeline-step">
-            <h3>1. Clarification · 15 min</h3>
-            <p>We quickly establish whether the audit fits your current commercial reality and decision context.</p>
+            <h3>1. Initial Clarification</h3>
+            <p>We establish the commercial context, the pressure point, and whether this diagnostic is the right starting point for your situation.</p>
           </div>
           <div class="timeline-step">
-            <h3>2. Express Audit · 90 min</h3>
-            <p>A concentrated review of the commercial structure, pressure points, and risk exposure behind your numbers.</p>
+            <h3>2. Focused Diagnostic Session</h3>
+            <p>We review the relevant structure, the likely causes behind the issue, and the risks hidden behind the visible numbers.</p>
           </div>
           <div class="timeline-step">
-            <h3>3. Diagnostic Output</h3>
-            <p>You receive a concise strategic reading and a clear maneuver direction—not a generic presentation deck.</p>
+            <h3>3. Strategic Reading</h3>
+            <p>You leave with a concise interpretation of the situation and a clear maneuver direction — not a generic presentation deck.</p>
           </div>
         </div>
 
         <div class="deliverables">
-          <div class="deliverable-item"><strong>✓ Risk Indicators</strong> — color-coded visibility over critical pressure zones</div>
-          <div class="deliverable-item"><strong>✓ Impact Matrix</strong> — likely consequences over the next 6 months if nothing changes</div>
-          <div class="deliverable-item"><strong>✓ 3 Recommended Decisions</strong> — the moves that protect margin, control, and future options</div>
+          <div class="deliverable-item"><strong>✓ Risk Indicators</strong> — immediate visibility over the main structural pressure zones</div>
+          <div class="deliverable-item"><strong>✓ Diagnostic Reading</strong> — a concise interpretation of what is likely driving the issue</div>
+          <div class="deliverable-item"><strong>✓ Priority Actions</strong> — the next decisions most likely to protect margin, control, and future options</div>
         </div>
       </div>
 
       <div class="qualification-grid">
         <div class="qualification-box good">
           <strong>● FOR WHOM</strong><br>
-          Companies that want clarity before negotiations, expansion, portfolio decisions, or deeper commercial investment.
+          Companies that need clarity before negotiation, expansion, portfolio decisions, or deeper commercial investment.
         </div>
         <div class="qualification-box bad">
           <strong>● NOT FOR</strong><br>
@@ -945,7 +978,7 @@
       <div class="survival-intro">
         <h3>When cost reduction weakens the very ability to sell</h3>
         <p>
-          In periods of pressure, the instinct is immediate cost reduction. But linear cuts often generate invisible long-term damage. This part of the audit tests whether your current crisis logic protects the real commercial assets of the business—or quietly accelerates decline.
+          In periods of pressure, the instinct is immediate cost reduction. But linear cuts often generate invisible long-term damage. This part of the diagnostic tests whether your current crisis logic protects the real commercial assets of the business — or quietly accelerates decline.
         </p>
       </div>
 
@@ -965,7 +998,7 @@
       </div>
 
       <p class="survival-close">
-        This is not generic consulting. It is the math of survival—making sure today’s measures do not become tomorrow’s unaffordable bill.
+        This is not generic consulting. It is the math of survival — making sure today’s measures do not become tomorrow’s unaffordable bill.
       </p>
     </div>
   </section>
@@ -975,13 +1008,13 @@
       <div class="form-header">
         <h2>Request the Diagnostic</h2>
         <p>
-          This audit requires commercial courage. If you want a sharper reading of where you really stand before the next major decision, leave your details below.
+          If you need a sharper commercial reading before the next major decision, leave your details below. I will review the situation and come back with the right next step.
         </p>
       </div>
 
       <form action="https://formspree.io/f/meepnlpp" method="POST">
-  <input type="hidden" name="_subject" value="New Commercial Express Audit request">
-        <input type="hidden" name="_subject" value="dan.v.chiculita@gmail.com">
+        <input type="hidden" name="_subject" value="New Commercial Express Diagnostic request">
+        <input type="hidden" name="_cc" value="dan.v.chiculita@gmail.com">
 
         <div class="form-grid">
           <div>
@@ -1007,10 +1040,10 @@
           <label><input type="checkbox" name="issues[]" value="Lack of impact simulation"> Important decisions are made without enough simulation</label>
         </div>
 
-        <button type="submit" class="btn-primary" style="width:100%;">Request the 90-minute audit</button>
+        <button type="submit" class="btn-primary" style="width:100%;">Request the diagnostic</button>
 
         <p class="micro-note">You can also write directly to: <strong>dan.v.chiculita@gmail.com</strong></p>
-        <p class="form-footer">✔ Reply within 24–48h · ✔ NDA-level confidentiality · ✔ No obligation</p>
+        <p class="form-footer">✔ Reply within 24–48h · ✔ Full confidentiality · ✔ No obligation</p>
       </form>
     </div>
   </section>
@@ -1033,14 +1066,13 @@
     </div>
   </footer>
 
-  <!-- EXIT POPUP -->
   <div id="exitPopup">
     <div class="popup-box">
       <span class="popup-close" onclick="closePopup()">×</span>
       <h3>Before you leave…</h3>
       <p>Most companies do not have a sales problem first.</p>
       <p>They have a visibility problem, a margin problem, or a decision problem.</p>
-      <p class="popup-strong">In 90 minutes, you can identify where profit is actually being lost.</p>
+      <p class="popup-strong">A focused diagnostic can show where margin, visibility, or decision quality are actually breaking down.</p>
       <a href="#contact" class="btn-primary">Request the diagnostic</a>
       <p style="margin-top:14px; font-size:12px; color:#7b848f;">No obligation. Full confidentiality.</p>
     </div>
