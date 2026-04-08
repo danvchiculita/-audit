@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audit Comercial Express | Dan Chiculiță</title>
+  <title>Diagnostic Comercial Express | Dan Chiculiță</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -57,7 +57,7 @@
     .section-lead {
       font-size: 1.04rem;
       color: var(--text-gray);
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto;
     }
 
@@ -110,7 +110,6 @@
       background: rgba(255,255,255,0.05);
     }
 
-    /* HEADER */
     header {
       position: absolute;
       width: 100%;
@@ -165,7 +164,6 @@
       border-color: rgba(255,255,255,0.5);
     }
 
-    /* HERO */
     #hero-section {
       min-height: 100vh;
       background:
@@ -201,9 +199,9 @@
     }
 
     .hero-subtitle {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      font-size: clamp(1.05rem, 2vw, 1.26rem);
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
       font-weight: 700;
       line-height: 1.6;
       color: #f1f5f9;
@@ -224,7 +222,29 @@
       font-weight: 500;
     }
 
-    /* INTRO STRIP */
+    .promise-strip {
+      padding: 58px 20px;
+      background: #ffffff;
+      text-align: center;
+      border-bottom: 1px solid rgba(10,25,47,0.06);
+    }
+
+    .promise-strip strong {
+      display: block;
+      font-size: 1.16rem;
+      line-height: 1.6;
+      color: var(--navy-deep);
+      max-width: 900px;
+      margin: 0 auto 12px;
+    }
+
+    .promise-strip p {
+      font-size: 1rem;
+      color: var(--text-gray);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
     .triptych {
       text-align: center;
     }
@@ -293,9 +313,11 @@
       font-weight: 800;
       margin-bottom: 28px;
       color: var(--navy-deep);
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* CRITICAL CHECKPOINTS */
     #critical-points {
       padding: 110px 20px;
       background: var(--pearl-white);
@@ -332,7 +354,6 @@
       font-size: 0.98rem;
     }
 
-    /* ROADMAP */
     #roadmap {
       padding: 110px 20px;
       background: var(--navy-deep);
@@ -423,7 +444,6 @@
       margin-right: auto;
     }
 
-    /* SURVIVAL STRATEGY */
     #survival-strategy {
       padding: 120px 20px;
       background: var(--bg-dark);
@@ -515,7 +535,6 @@
       margin-right: auto;
     }
 
-    /* CONTACT */
     #contact {
       padding: 110px 20px;
       text-align: center;
@@ -621,7 +640,6 @@
       color: #5f6874;
     }
 
-    /* FOOTER */
     footer {
       padding: 36px 20px;
       background: #02050a;
@@ -664,7 +682,6 @@
       fill: var(--accent-gold);
     }
 
-    /* EXIT POPUP */
     #exitPopup {
       display: none;
       position: fixed;
@@ -716,7 +733,6 @@
       margin-bottom: 22px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 980px) {
       .risk-grid,
       .points-grid {
@@ -778,10 +794,20 @@
         padding-top: 72px;
         padding-bottom: 72px;
       }
+
+      .promise-strip {
+        padding-top: 42px;
+        padding-bottom: 42px;
+      }
     }
   </style>
 </head>
 <body>
+  <div style="position:absolute; top:20px; right:20px; z-index:999;">
+    <a href="index.html" style="color:white; font-weight:600; text-decoration:none;">
+      EN
+    </a>
+  </div>
 
   <header>
     <div class="header-inner">
@@ -789,25 +815,36 @@
         <a href="#" class="brand-name">Dan Chiculiță</a>
         <div class="logo-dde">DIAGNOSTIC. DECIZIE. EXECUȚIE.</div>
       </div>
-      <a href="index-en.html" class="linkedin-btn">EN</a>
+      <a href="https://linkedin.com/in/danchiculita" target="_blank" rel="noopener noreferrer" class="linkedin-btn">LinkedIn</a>
     </div>
   </header>
 
   <section id="hero-section">
     <div class="hero-inner">
-      <div class="eyebrow">Audit Comercial Express · 90 de minute</div>
-      <p class="hero-kicker">Ai analizat business-ul din toate unghiurile. Și totuși cifrele nu se aliniază.</p>
-      <h1 class="hero-quote">„You can’t see the label from inside the bottle.”</h1>
+      <div class="eyebrow">Diagnostic Comercial Express</div>
+      <p class="hero-kicker">Când vânzările se mișcă, dar profitul, vizibilitatea sau controlul nu, problema este de regulă structurală.</p>
+      <h1 class="hero-quote">Claritate înainte de următoarea greșeală comercială.</h1>
       <p class="hero-subtitle">
-        Acest audit nu încearcă să te învețe meseria ta. Aplică rigoarea comercială a retailerului asupra propriului tău model de vânzare, ca să vezi unde se diluează profitul, unde ipotezele devin periculoase și unde următoarea decizie trebuie luată cu mai multă disciplină.
+        Un diagnostic comercial focalizat, conceput pentru a izola problema structurală din spatele erodării marjei, promoțiilor ineficiente, execuției slabe în retail sau unei logici fragile de listare — înainte ca aceasta să devină mai costisitoare.
       </p>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Solicită un diagnostic de 90 de minute</a>
-        <a href="#critical-points" class="btn-secondary">Vezi ce verifică auditul</a>
+        <a href="#contact" class="btn-primary">Solicită diagnosticul</a>
+        <a href="#critical-points" class="btn-secondary">Vezi ce verifică</a>
       </div>
 
-      <div class="hero-note">Pentru furnizori, lideri comerciali, fondatori și decidenți care au nevoie de claritate înainte de următoarea mișcare importantă.</div>
+      <div class="hero-note">Pentru furnizori FMCG, antreprenori și lideri comerciali care au nevoie de o citire mai clară înainte de negociere, expansiune sau corecție.</div>
+    </div>
+  </section>
+
+  <section class="promise-strip">
+    <div class="container">
+      <strong>
+        Diagnostic Comercial Express este o intervenție focalizată pe o problemă comercială concretă — înainte ca aceasta să devină costisitoare.
+      </strong>
+      <p>
+        Este punctul de claritate care îți arată dacă problema necesită un audit comercial sau o intervenție punctuală.
+      </p>
     </div>
   </section>
 
@@ -815,65 +852,65 @@
     <div class="triptych-top">
       <h2>
         Multe companii intră în retail cu încredere.<br>
-        <span>Foarte puține intră cu o structură cu adevărat validată sub presiune.</span>
+        <span>Foarte puține intră cu o structură cu adevărat testată sub presiune.</span>
       </h2>
     </div>
 
     <div class="triptych-middle">
       <div class="risk-grid">
         <div class="risk-card">
-          <h4>Eroziunea Profitului</h4>
-          <p>Cifra de afaceri crește, dar profitabilitatea netă este consumată în tăcere de taxe, discounturi, logistică și execuție slabă.</p>
+          <h4>Erodarea Profitului</h4>
+          <p>Veniturile cresc, dar profitabilitatea netă este consumată în liniște de taxe, discounturi, logistică și execuție slabă.</p>
         </div>
         <div class="risk-card">
-          <h4>Risipa Promoțională</h4>
-          <p>Rulezi volum, dar finanțezi pierderi în loc să construiești o rotație sănătoasă și repetabilă.</p>
+          <h4>Risipă Promoțională</h4>
+          <p>Miști volum, dar finanțezi pierderi în loc să construiești o rotație sănătoasă și repetabilă.</p>
         </div>
         <div class="risk-card">
           <h4>Presiune Comercială</h4>
-          <p>Termenii sunt acceptați sub urgență, înainte ca impactul lor real să fie modelat și înțeles.</p>
+          <p>Termenii sunt acceptați sub presiune, înainte ca impactul lor real să fie modelat și înțeles.</p>
         </div>
         <div class="risk-card">
           <h4>Expunere Strategică</h4>
-          <p>Devii vulnerabil la presiunea private label, la dependența de retailer sau la un portofoliu structural slab.</p>
+          <p>Devii vulnerabil la presiunea private label, dependența de retailer sau un portofoliu slab structurat.</p>
         </div>
       </div>
     </div>
 
     <div class="triptych-bottom">
-      <p>Auditul Comercial Express izolează semnalele reale de profit în 90 de minute concentrate.</p>
-      <a href="#contact" class="btn-primary">Începe cu un diagnostic focalizat</a>
+      <p>Diagnostic Comercial Express izolează punctele reale de presiune comercială înainte ca ele să se transforme în probleme mai mari de marjă, execuție sau negociere.</p>
+      <a href="#contact" class="btn-primary">Începe diagnosticul</a>
     </div>
   </section>
 
   <section id="critical-points">
     <div class="container">
-      <div class="eyebrow">6 puncte critice de verificare</div>
-      <h2 class="section-title">Un audit strategic construit în jurul deciziilor care contează cel mai mult</h2>
+      <div class="eyebrow">6 Puncte Critice</div>
+      <h2 class="section-title">Un diagnostic focalizat, construit în jurul deciziilor care contează cel mai mult</h2>
       <p class="section-lead">
-        Nu este o revizie generică. Este un diagnostic comercial conceput pentru a testa rezistența structurală a modelului tău de retail înainte de negociere, expansiune, escaladare sau investiție comercială suplimentară.
+        Nu este o revizuire generică. Este un diagnostic comercial conceput pentru a testa soliditatea structurală a modelului tău de retail înainte de negociere, expansiune, escaladare sau investiție suplimentară.
       </p>
 
       <div class="points-grid">
         <div class="point-box">
           <h4>01. Profitabilitate Netă</h4>
-          <p>Evaluăm marja comercială reală după toate taxele, discounturile și scurgerile de cost, nu doar linia de sus vizibilă.</p>
+          <p>Evaluăm marja comercială reală după toate taxele, discounturile și scurgerile de cost — nu doar linia vizibilă de vânzări.</p>
         </div>
         <div class="point-box">
           <h4>02. Eficiență Promoțională</h4>
-          <p>Testăm dacă promoțiile din catalog și de la raft creează mișcare profitabilă sau doar subvenționează volum fără randament real.</p>
+          <p>Testăm dacă promoțiile creează mișcare profitabilă sau doar subvenționează volum fără randament real.</p>
         </div>
         <div class="point-box">
           <h4>03. Structura Portofoliului</h4>
-          <p>Separăm SKU-urile strategice „locomotivă” de produsele care consumă capital, diluează focusul sau slăbesc poziția de negociere.</p>
+          <p>Separăm SKU-urile strategice de produsele care consumă capital, diluează focusul sau slăbesc pârghia de negociere.</p>
         </div>
         <div class="point-box">
-          <h4>04. Dinamica la Raft</h4>
-          <p>Analizăm rotația, frecvența, ritmul de aprovizionare și fricțiunea operațională care subminează performanța de vânzare.</p>
+          <h4>04. Dinamica de Raft</h4>
+          <p>Analizăm rotația, ritmul de reaprovizionare și fricțiunile operaționale care subminează în liniște performanța la vânzare.</p>
         </div>
         <div class="point-box">
           <h4>05. Expunerea Brandului</h4>
-          <p>Evaluăm câtă vizibilitate și ce rol câștigă brandul tău în fața cumpărătorului versus cât te costă listarea respectivă.</p>
+          <p>Evaluăm câtă vizibilitate și ce rol câștigă efectiv brandul tău în fața cumpărătorului versus cât te costă listarea.</p>
         </div>
         <div class="point-box">
           <h4>06. Priorități de Acțiune</h4>
@@ -886,46 +923,46 @@
   <section id="roadmap">
     <div class="container">
       <div class="roadmap-head">
-        <div class="eyebrow">Foaie de parcurs & livrabil</div>
-        <h2 class="section-title">Ce se întâmplă în practică</h2>
+        <div class="eyebrow">Cum Funcționează</div>
+        <h2 class="section-title">Cum funcționează diagnosticul în practică</h2>
       </div>
 
       <div class="roadmap-wrap">
         <div class="timeline">
           <div class="timeline-step">
-            <h3>1. Clarificare · 15 min</h3>
-            <p>Stabilim rapid dacă auditul se potrivește realității tale comerciale și contextului decizional actual.</p>
+            <h3>1. Clarificare Inițială</h3>
+            <p>Stabilim contextul comercial, punctul de presiune și dacă acest diagnostic este punctul de pornire potrivit pentru situația ta.</p>
           </div>
           <div class="timeline-step">
-            <h3>2. Audit Express · 90 min</h3>
-            <p>O analiză concentrată a structurii comerciale, a punctelor de presiune și a expunerii la risc din spatele cifrelor tale.</p>
+            <h3>2. Sesiune de Diagnostic Focalizat</h3>
+            <p>Analizăm structura relevantă, cauzele probabile din spatele problemei și riscurile ascunse în spatele cifrelor vizibile.</p>
           </div>
           <div class="timeline-step">
-            <h3>3. Output Diagnostic</h3>
-            <p>Primești o lectură strategică sintetică și o direcție clară de manevră, nu un deck generic de prezentare.</p>
+            <h3>3. Citire Strategică</h3>
+            <p>Pleci cu o interpretare concisă a situației și o direcție clară de manevră — nu cu un deck generic de prezentare.</p>
           </div>
         </div>
 
         <div class="deliverables">
-          <div class="deliverable-item"><strong>✓ Indicatori de Risc</strong> — vizibilitate codificată pe culori asupra zonelor critice de presiune</div>
-          <div class="deliverable-item"><strong>✓ Matrice de Impact</strong> — consecințele probabile în următoarele 6 luni dacă nu se schimbă nimic</div>
-          <div class="deliverable-item"><strong>✓ 3 Decizii Recomandate</strong> — mișcările care protejează marja, controlul și opțiunile viitoare</div>
+          <div class="deliverable-item"><strong>✓ Indicatori de Risc</strong> — vizibilitate imediată asupra principalelor zone de presiune structurală</div>
+          <div class="deliverable-item"><strong>✓ Citire de Diagnostic</strong> — o interpretare concisă a ceea ce generează cel mai probabil problema</div>
+          <div class="deliverable-item"><strong>✓ Priorități de Acțiune</strong> — deciziile următoare cu cel mai mare potențial de a proteja marja, controlul și opțiunile viitoare</div>
         </div>
       </div>
 
       <div class="qualification-grid">
         <div class="qualification-box good">
           <strong>● PENTRU CINE</strong><br>
-          Companii care vor claritate înainte de negocieri, expansiune, decizii de portofoliu sau investiție comercială suplimentară.
+          Companii care au nevoie de claritate înainte de negociere, expansiune, decizii de portofoliu sau investiții comerciale mai profunde.
         </div>
         <div class="qualification-box bad">
-          <strong>● NU PENTRU</strong><br>
-          Cei care caută confirmări confortabile în locul unei lecturi oneste a realității comerciale.
+          <strong>● NU ESTE PENTRU</strong><br>
+          Cei care caută confirmare confortabilă în locul unei citiri oneste a realității comerciale.
         </div>
       </div>
 
       <p class="roadmap-quote">
-        „Nu garantez listări. Garantez claritatea de a nu semna o structură care îți pune business-ul în pericol.”
+        „Nu garantez listări. Garantez claritatea de a nu semna o structură care îți pune business-ul în risc.”
       </p>
     </div>
   </section>
@@ -941,27 +978,27 @@
       <div class="survival-intro">
         <h3>Când reducerea costurilor slăbește chiar capacitatea de a vinde</h3>
         <p>
-          În perioadele de presiune, instinctul este reducerea imediată a costurilor. Dar tăierile liniare generează adesea daune invizibile pe termen lung. Această parte a auditului testează dacă logica ta actuală de criză protejează activele comerciale reale ale business-ului sau accelerează în tăcere declinul.
+          În perioade de presiune, instinctul este reducerea imediată a costurilor. Dar tăierile liniare generează adesea daune invizibile pe termen lung. Această parte a diagnosticului testează dacă logica actuală de criză protejează activele comerciale reale ale business-ului — sau accelerează în tăcere declinul.
         </p>
       </div>
 
       <div class="survival-boxes">
         <div class="survival-box">
           <strong>Vulnerabilitatea Teritoriului</strong>
-          <p>În ce punct reducerea frecvenței la raft devine o invitație deschisă pentru concurență să preia spațiu, atenție și conversie?</p>
+          <p>În ce punct scăderea frecvenței la raft devine o invitație deschisă pentru concurență să preia spațiu, atenție și conversie?</p>
         </div>
         <div class="survival-box">
           <strong>Capacitatea de Execuție</strong>
-          <p>Ce detalii de profit dispar atunci când organizația intră în mod strict de supraviețuire și disciplina comercială începe să se erodeze?</p>
+          <p>Ce detalii de profit dispar atunci când organizația intră în modul strict de supraviețuire și disciplina comercială începe să se erodeze?</p>
         </div>
         <div class="survival-box">
           <strong>Costul Recuperării</strong>
-          <p>Este economia de azi cu adevărat mai mică decât investiția viitoare necesară pentru a recupera poziția pierdută peste 12 luni?</p>
+          <p>Este economia de azi cu adevărat mai mică decât investiția viitoare necesară pentru recuperarea poziției pierdute peste 12 luni?</p>
         </div>
       </div>
 
       <p class="survival-close">
-        Nu este consultanță generică. Este matematica supraviețuirii — ca să te asiguri că măsurile de azi nu devin nota de plată imposibilă de mâine.
+        Nu este consultanță generică. Este matematica supraviețuirii — pentru ca măsurile de azi să nu devină factura imposibil de susținut de mâine.
       </p>
     </div>
   </section>
@@ -971,13 +1008,13 @@
       <div class="form-header">
         <h2>Solicită Diagnosticul</h2>
         <p>
-          Acest audit cere curaj comercial. Dacă vrei o lectură mai clară a locului în care te afli cu adevărat înainte de următoarea decizie majoră, lasă mai jos datele tale.
+          Dacă ai nevoie de o citire comercială mai clară înainte de următoarea decizie importantă, lasă detaliile mai jos. Voi analiza situația și voi reveni cu următorul pas potrivit.
         </p>
       </div>
 
       <form action="https://formspree.io/f/meepnlpp" method="POST">
-        <input type="hidden" name="_subject" value="Solicitare nouă Audit Comercial Express">
-        <input type="hidden" name="_value="dan.v.chiculita@gmail.com">
+        <input type="hidden" name="_subject" value="Cerere nouă - Diagnostic Comercial Express">
+        <input type="hidden" name="_cc" value="dan.v.chiculita@gmail.com">
 
         <div class="form-grid">
           <div>
@@ -990,23 +1027,23 @@
             <input type="text" name="company" placeholder="Companie">
           </div>
           <div class="full-width">
-            <textarea name="context" placeholder="Ce situație comercială ai vrea să clarifici?"></textarea>
+            <textarea name="context" placeholder="Ce situație comercială vrei să clarifici?"></textarea>
           </div>
         </div>
 
         <div class="checklist">
-          <label><input type="checkbox" name="issues[]" value="Marja netă scade"> Marja netă este în scădere</label>
-          <label><input type="checkbox" name="issues[]" value="Promoții ineficiente"> Promoțiile par costisitoare, dar nu decisive</label>
-          <label><input type="checkbox" name="issues[]" value="Presiune pe termenii comerciali"> Termenii sunt acceptați sub presiune</label>
-          <label><input type="checkbox" name="issues[]" value="Cash flow blocat"> Cash flow-ul se strânge</label>
-          <label><input type="checkbox" name="issues[]" value="Expunere private label"> Presiunea private label crește</label>
-          <label><input type="checkbox" name="issues[]" value="Lipsă simulare de impact"> Deciziile importante se iau fără suficientă simulare</label>
+          <label><input type="checkbox" name="issues[]" value="Scadere marja neta"> Marja netă este în scădere</label>
+          <label><input type="checkbox" name="issues[]" value="Promotii ineficiente"> Promoțiile par costisitoare, dar fără impact decisiv</label>
+          <label><input type="checkbox" name="issues[]" value="Presiune pe termeni comerciali"> Termenii comerciali sunt acceptați sub presiune</label>
+          <label><input type="checkbox" name="issues[]" value="Blocaj cash flow"> Cash-flow-ul devine tensionat</label>
+          <label><input type="checkbox" name="issues[]" value="Presiune private label"> Presiunea private label este în creștere</label>
+          <label><input type="checkbox" name="issues[]" value="Lipsa simularii impactului"> Deciziile importante sunt luate fără suficientă simulare</label>
         </div>
 
-        <button type="submit" class="btn-primary" style="width:100%;">Solicită auditul de 90 de minute</button>
+        <button type="submit" class="btn-primary" style="width:100%;">Solicită diagnosticul</button>
 
-        <p class="micro-note">Poți scrie și direct la: <strong>dan.v.chiculita@gmail.com</strong></p>
-        <p class="form-footer">✔ Răspuns în 24–48h · ✔ Confidențialitate la nivel NDA · ✔ Fără obligații</p>
+        <p class="micro-note">Poți scrie direct și la: <strong>dan.v.chiculita@gmail.com</strong></p>
+        <p class="form-footer">✔ Răspuns în 24–48h · ✔ Confidențialitate completă · ✔ Fără obligații</p>
       </form>
     </div>
   </section>
@@ -1019,7 +1056,7 @@
       </div>
 
       <div class="footer-right">
-        <p>Protocol: confidențialitate 100% sub NDA.</p>
+        <p>Protocol: 100% confidențialitate sub NDA.</p>
         <svg class="shield-svg" viewBox="0 0 100 120">
           <path d="M50,5 L90,20 L90,60 C90,90 50,115 50,115 C50,115 10,90 10,60 L10,20 Z" fill="none" stroke="#d4af37" stroke-width="4"/>
           <path d="M50,5 L50,60 L10,60 L10,20 Z" fill="#d4af37"/>
@@ -1029,14 +1066,13 @@
     </div>
   </footer>
 
-  <!-- EXIT POPUP -->
   <div id="exitPopup">
     <div class="popup-box">
       <span class="popup-close" onclick="closePopup()">×</span>
       <h3>Înainte să pleci…</h3>
       <p>Majoritatea companiilor nu au mai întâi o problemă de vânzări.</p>
       <p>Au o problemă de vizibilitate, de marjă sau de decizie.</p>
-      <p class="popup-strong">În 90 de minute poți identifica unde se pierde profitul în realitate.</p>
+      <p class="popup-strong">Un diagnostic focalizat poate arăta unde se rupe în realitate marja, vizibilitatea sau calitatea deciziei.</p>
       <a href="#contact" class="btn-primary">Solicită diagnosticul</a>
       <p style="margin-top:14px; font-size:12px; color:#7b848f;">Fără obligații. Confidențialitate completă.</p>
     </div>
