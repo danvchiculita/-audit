@@ -71,6 +71,20 @@
       margin-bottom: 16px;
     }
 
+    .hero-label {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.82);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
     .btn-primary,
     .btn-secondary {
       display: inline-flex;
@@ -131,7 +145,7 @@
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
@@ -140,14 +154,64 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.55rem;
       font-weight: 700;
+      line-height: 1.05;
     }
 
     .logo-dde {
       color: var(--accent-gold);
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-switch a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(15,23,42,0.34);
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .lang-switch a:hover {
+      background: rgba(255,255,255,0.10);
+      transform: translateY(-1px);
+    }
+
+    .lang-switch a.active {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.28);
+    }
+
+    .lang-switch span {
+      color: rgba(255,255,255,0.38);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
     }
 
     .linkedin-btn {
@@ -157,6 +221,7 @@
       padding: 10px 18px;
       border-radius: 4px;
       transition: all 0.25s ease;
+      white-space: nowrap;
     }
 
     .linkedin-btn:hover {
@@ -751,17 +816,66 @@
         padding-bottom: 30px;
         text-align: left;
       }
+
+      .header-inner {
+        width: min(1180px, calc(100% - 28px));
+      }
     }
 
     @media (max-width: 760px) {
-      .header-inner,
-      .brand-wrap {
+      .header-inner {
         flex-direction: column;
         text-align: center;
+        gap: 14px;
+      }
+
+      .brand-wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .header-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .brand-name {
+        font-size: 2.05rem;
+      }
+
+      .logo-dde {
+        font-size: 0.72rem;
+        letter-spacing: 0.09em;
+      }
+
+      .hero-label {
+        padding: 6px 12px;
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+        margin-bottom: 16px;
+      }
+
+      .hero-kicker {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+      }
+
+      .hero-quote {
+        font-size: clamp(2.1rem, 8vw, 3.4rem);
+        line-height: 1.02;
+        margin-bottom: 18px;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
       }
 
       .hero-actions {
         flex-direction: column;
+        gap: 12px;
       }
 
       .btn-primary,
@@ -800,41 +914,103 @@
         padding-bottom: 42px;
       }
     }
-  </style>
- <header>
-    <div class="header-inner">
 
+    @media (max-width: 640px) {
+      header {
+        padding: 20px 0;
+      }
+
+      .header-inner {
+        gap: 12px;
+      }
+
+      .brand-name {
+        font-size: 1.75rem;
+      }
+
+      .logo-dde {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+      }
+
+      .lang-switch {
+        gap: 8px;
+      }
+
+      .lang-switch a {
+        min-width: 40px;
+        height: 36px;
+        padding: 0 12px;
+        font-size: 0.8rem;
+      }
+
+      .linkedin-btn {
+        padding: 9px 14px;
+        font-size: 0.88rem;
+      }
+
+      #hero-section {
+        padding: 150px 20px 72px;
+      }
+
+      .hero-label {
+        font-size: 0.66rem;
+        padding: 6px 10px;
+        margin-bottom: 14px;
+      }
+
+      .hero-kicker {
+        font-size: 0.92rem;
+        margin-bottom: 16px;
+      }
+
+      .hero-quote {
+        font-size: clamp(2rem, 10vw, 3.1rem);
+        line-height: 0.98;
+      }
+
+      .hero-subtitle {
+        font-size: 0.96rem;
+        line-height: 1.65;
+      }
+
+      .hero-note {
+        font-size: 0.86rem;
+        line-height: 1.55;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
       <div class="brand-wrap">
         <a href="#" class="brand-name">Dan Chiculiță</a>
         <div class="logo-dde">DIAGNOSTIC. DECISION. EXECUTION.</div>
       </div>
 
-      <div style="display:flex; align-items:center; gap:16px;">
-        
-        <!-- LANGUAGE SWITCH -->
+      <div class="header-actions">
         <div class="lang-switch">
           <a href="https://danvchiculita.github.io/retail-diagnostic-comercial/index-ro.html">RO</a>
           <span>|</span>
           <a href="https://danvchiculita.github.io/retail-diagnostic-comercial/" class="active">EN</a>
         </div>
 
-        <!-- LINKEDIN -->
         <a href="https://linkedin.com/in/danchiculita" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
           LinkedIn
         </a>
-
       </div>
-
     </div>
   </header>
 
   <section id="hero-section">
     <div class="hero-inner">
-      <div class="eyebrow">Commercial Express Diagnostic</div>
-      <p class="hero-kicker">When sales move, but profit, visibility, or control do not, the problem is usually structural.</p>
+      <div class="eyebrow hero-label">COMMERCIAL EXPRESS DIAGNOSTIC</div>
+      <p class="hero-kicker">When sales move but profit, visibility or control do not, the problem is usually structural.</p>
       <h1 class="hero-quote">Clarity before the next commercial mistake.</h1>
       <p class="hero-subtitle">
-        A focused commercial diagnostic designed to isolate the structural issue behind margin erosion, inefficient promotions, weak retail execution, or fragile listing logic — before it becomes more expensive.
+        A focused commercial diagnostic designed to isolate the structural issue behind margin erosion, inefficient promotions, weak retail execution or fragile listing logic — before it becomes more expensive.
       </p>
 
       <div class="hero-actions">
@@ -842,14 +1018,14 @@
         <a href="#critical-points" class="btn-secondary">See what it checks</a>
       </div>
 
-      <div class="hero-note">For FMCG suppliers, founders, and commercial leaders who need a sharper reading before negotiation, expansion, or corrective action.</div>
+      <div class="hero-note">For FMCG suppliers, entrepreneurs and commercial leaders who need a clearer reading before negotiation, expansion or correction.</div>
     </div>
   </section>
 
   <section class="promise-strip">
     <div class="container">
       <strong>
-        Commercial Express Diagnostic is a focused intervention built around one concrete commercial issue — before it becomes more expensive.
+        Commercial Express Diagnostic is a focused intervention built around one concrete commercial issue — before it becomes costly.
       </strong>
       <p>
         It is the point of clarity that shows whether the issue requires a full commercial audit or a targeted intervention.
@@ -861,7 +1037,7 @@
     <div class="triptych-top">
       <h2>
         Many companies enter retail with confidence.<br>
-        <span>Very few enter with a structure that has truly been pressure-tested.</span>
+        <span>Very few enter with a structure that has truly been tested under pressure.</span>
       </h2>
     </div>
 
@@ -869,61 +1045,61 @@
       <div class="risk-grid">
         <div class="risk-card">
           <h4>Profit Erosion</h4>
-          <p>Revenue grows, but net profitability is quietly consumed by fees, discounts, logistics, and weak execution.</p>
+          <p>Revenue grows, but net profitability is quietly consumed by fees, discounts, logistics and weak execution.</p>
         </div>
         <div class="risk-card">
           <h4>Promotional Waste</h4>
-          <p>You move volume, but finance losses instead of building healthy, repeatable rotation.</p>
+          <p>You move volume, but finance losses instead of building healthy and repeatable rotation.</p>
         </div>
         <div class="risk-card">
           <h4>Commercial Pressure</h4>
-          <p>Terms are accepted under urgency, before their real impact has been modeled and understood.</p>
+          <p>Terms are accepted under pressure before their real impact is properly modelled and understood.</p>
         </div>
         <div class="risk-card">
           <h4>Strategic Exposure</h4>
-          <p>You become vulnerable to private label pressure, retailer dependency, or a structurally weak portfolio.</p>
+          <p>You become vulnerable to private label pressure, retailer dependence or a weakly structured portfolio.</p>
         </div>
       </div>
     </div>
 
     <div class="triptych-bottom">
-      <p>The Commercial Express Diagnostic isolates the real commercial pressure points before they turn into larger margin, execution, or negotiation problems.</p>
+      <p>Commercial Express Diagnostic isolates the real points of commercial pressure before they turn into larger margin, execution or negotiation problems.</p>
       <a href="#contact" class="btn-primary">Start the diagnostic</a>
     </div>
   </section>
 
   <section id="critical-points">
     <div class="container">
-      <div class="eyebrow">6 Critical Checkpoints</div>
+      <div class="eyebrow">6 Critical Points</div>
       <h2 class="section-title">A focused diagnostic built around the decisions that matter most</h2>
       <p class="section-lead">
-        This is not a generic review. It is a commercial diagnostic designed to test the structural strength of your retail model before negotiation, expansion, escalation, or deeper investment.
+        This is not a generic review. It is a commercial diagnostic designed to test the structural strength of your retail model before negotiation, expansion, escalation or additional investment.
       </p>
 
       <div class="points-grid">
         <div class="point-box">
           <h4>01. Net Profitability</h4>
-          <p>We assess real commercial margin after all fees, discounts, and cost leakages — not just the visible top line.</p>
+          <p>We evaluate the real commercial margin after all fees, discounts and cost leakages — not just the visible sales line.</p>
         </div>
         <div class="point-box">
           <h4>02. Promotional Efficiency</h4>
-          <p>We test whether promotions create profitable movement or simply subsidize volume without real return.</p>
+          <p>We test whether promotions create profitable movement or simply subsidise volume without real return.</p>
         </div>
         <div class="point-box">
           <h4>03. Portfolio Structure</h4>
-          <p>We separate strategic SKUs from products that consume capital, dilute focus, or weaken negotiation leverage.</p>
+          <p>We separate strategic SKUs from products that consume capital, dilute focus or weaken negotiation leverage.</p>
         </div>
         <div class="point-box">
           <h4>04. Shelf Dynamics</h4>
-          <p>We examine rotation, replenishment rhythm, and the operational friction that quietly undermines sales performance.</p>
+          <p>We analyse rotation, replenishment rhythm and operational friction that quietly undermine selling performance.</p>
         </div>
         <div class="point-box">
           <h4>05. Brand Exposure</h4>
-          <p>We evaluate how much visibility and role your brand actually wins in front of the shopper versus what the listing costs you.</p>
+          <p>We assess how much visibility and what real role your brand wins in front of the shopper versus how much the listing costs you.</p>
         </div>
         <div class="point-box">
           <h4>06. Action Priorities</h4>
-          <p>We define the practical maneuver options: renegotiation, portfolio correction, defensive moves, or controlled acceleration.</p>
+          <p>We define the most practical next moves: renegotiation, portfolio correction, defensive moves or controlled acceleration.</p>
         </div>
       </div>
     </div>
@@ -940,33 +1116,33 @@
         <div class="timeline">
           <div class="timeline-step">
             <h3>1. Initial Clarification</h3>
-            <p>We establish the commercial context, the pressure point, and whether this diagnostic is the right starting point for your situation.</p>
+            <p>We define the commercial context, the pressure point and whether this diagnostic is the right starting point for your situation.</p>
           </div>
           <div class="timeline-step">
             <h3>2. Focused Diagnostic Session</h3>
-            <p>We review the relevant structure, the likely causes behind the issue, and the risks hidden behind the visible numbers.</p>
+            <p>We analyse the relevant structure, the likely causes behind the issue and the hidden risks beneath the visible numbers.</p>
           </div>
           <div class="timeline-step">
             <h3>3. Strategic Reading</h3>
-            <p>You leave with a concise interpretation of the situation and a clear maneuver direction — not a generic presentation deck.</p>
+            <p>You leave with a concise interpretation of the situation and a clear direction of manoeuvre — not with a generic presentation deck.</p>
           </div>
         </div>
 
         <div class="deliverables">
-          <div class="deliverable-item"><strong>✓ Risk Indicators</strong> — immediate visibility over the main structural pressure zones</div>
-          <div class="deliverable-item"><strong>✓ Diagnostic Reading</strong> — a concise interpretation of what is likely driving the issue</div>
-          <div class="deliverable-item"><strong>✓ Priority Actions</strong> — the next decisions most likely to protect margin, control, and future options</div>
+          <div class="deliverable-item"><strong>✓ Risk Indicators</strong> — immediate visibility on the main areas of structural pressure</div>
+          <div class="deliverable-item"><strong>✓ Diagnostic Reading</strong> — a concise interpretation of what most likely drives the issue</div>
+          <div class="deliverable-item"><strong>✓ Action Priorities</strong> — the next decisions with the highest potential to protect margin, control and future options</div>
         </div>
       </div>
 
       <div class="qualification-grid">
         <div class="qualification-box good">
           <strong>● FOR WHOM</strong><br>
-          Companies that need clarity before negotiation, expansion, portfolio decisions, or deeper commercial investment.
+          Companies that need clarity before negotiation, expansion, portfolio decisions or deeper commercial investment.
         </div>
         <div class="qualification-box bad">
           <strong>● NOT FOR</strong><br>
-          Those looking for comfortable confirmation instead of an honest reading of the commercial reality.
+          Those looking for comfortable confirmation instead of an honest reading of commercial reality.
         </div>
       </div>
 
@@ -985,29 +1161,29 @@
       <div class="survival-title">Retail Survival Strategy</div>
 
       <div class="survival-intro">
-        <h3>When cost reduction weakens the very ability to sell</h3>
+        <h3>When cost cutting weakens the very ability to sell</h3>
         <p>
-          In periods of pressure, the instinct is immediate cost reduction. But linear cuts often generate invisible long-term damage. This part of the diagnostic tests whether your current crisis logic protects the real commercial assets of the business — or quietly accelerates decline.
+          Under pressure, the instinct is immediate cost reduction. But linear cuts often create invisible long-term damage. This part of the diagnostic tests whether the current crisis logic protects the real commercial assets of the business — or quietly accelerates decline.
         </p>
       </div>
 
       <div class="survival-boxes">
         <div class="survival-box">
           <strong>Territory Vulnerability</strong>
-          <p>At what point does reduced shelf frequency become an open invitation for competition to take space, attention, and conversion?</p>
+          <p>At what point does declining shelf frequency become an open invitation for competition to take space, attention and conversion?</p>
         </div>
         <div class="survival-box">
           <strong>Execution Capacity</strong>
-          <p>What profit details disappear when the organization shifts into strict survival mode and commercial discipline starts to erode?</p>
+          <p>Which profit details disappear when the organisation enters strict survival mode and commercial discipline begins to erode?</p>
         </div>
         <div class="survival-box">
           <strong>Recovery Cost</strong>
-          <p>Is today’s saving truly smaller than the future investment required to recover the lost position 12 months from now?</p>
+          <p>Is today’s saving truly smaller than the future investment required to recover the position lost over the next 12 months?</p>
         </div>
       </div>
 
       <p class="survival-close">
-        This is not generic consulting. It is the math of survival — making sure today’s measures do not become tomorrow’s unaffordable bill.
+        This is not generic consulting. It is the mathematics of survival — so today’s measures do not become tomorrow’s unsustainable bill.
       </p>
     </div>
   </section>
@@ -1017,12 +1193,12 @@
       <div class="form-header">
         <h2>Request the Diagnostic</h2>
         <p>
-          If you need a sharper commercial reading before the next major decision, leave your details below. I will review the situation and come back with the right next step.
+          If you need a clearer commercial reading before the next important decision, leave your details below. I will review the situation and come back with the most useful next step.
         </p>
       </div>
 
       <form action="https://formspree.io/f/meepnlpp" method="POST">
-  <input type="hidden" name="_subject" value="New Commercial Express Diagnostic request">
+        <input type="hidden" name="_subject" value="New Request - Commercial Express Diagnostic">
 
         <div class="form-grid">
           <div>
@@ -1035,16 +1211,16 @@
             <input type="text" name="company" placeholder="Company">
           </div>
           <div class="full-width">
-            <textarea name="context" placeholder="What commercial situation would you like to clarify?"></textarea>
+            <textarea name="context" placeholder="What commercial situation do you want to clarify?"></textarea>
           </div>
         </div>
 
         <div class="checklist">
-          <label><input type="checkbox" name="issues[]" value="Net margin declining"> Net margin is declining</label>
-          <label><input type="checkbox" name="issues[]" value="Inefficient promotions"> Promotions feel expensive but not decisive</label>
-          <label><input type="checkbox" name="issues[]" value="Pressure on commercial terms"> Terms are being accepted under pressure</label>
-          <label><input type="checkbox" name="issues[]" value="Blocked cash flow"> Cash flow is tightening</label>
-          <label><input type="checkbox" name="issues[]" value="Private label exposure"> Private label pressure is increasing</label>
+          <label><input type="checkbox" name="issues[]" value="Net margin decline"> Net margin is declining</label>
+          <label><input type="checkbox" name="issues[]" value="Inefficient promotions"> Promotions seem costly without decisive impact</label>
+          <label><input type="checkbox" name="issues[]" value="Pressure on commercial terms"> Commercial terms are accepted under pressure</label>
+          <label><input type="checkbox" name="issues[]" value="Cash flow blockage"> Cash flow is becoming tight</label>
+          <label><input type="checkbox" name="issues[]" value="Private label pressure"> Private label pressure is increasing</label>
           <label><input type="checkbox" name="issues[]" value="Lack of impact simulation"> Important decisions are made without enough simulation</label>
         </div>
 
@@ -1078,9 +1254,9 @@
     <div class="popup-box">
       <span class="popup-close" onclick="closePopup()">×</span>
       <h3>Before you leave…</h3>
-      <p>Most companies do not have a sales problem first.</p>
-      <p>They have a visibility problem, a margin problem, or a decision problem.</p>
-      <p class="popup-strong">A focused diagnostic can show where margin, visibility, or decision quality are actually breaking down.</p>
+      <p>Most companies do not first have a sales problem.</p>
+      <p>They have a visibility, margin or decision problem.</p>
+      <p class="popup-strong">A focused diagnostic can show where margin, visibility or decision quality actually breaks.</p>
       <a href="#contact" class="btn-primary">Request the diagnostic</a>
       <p style="margin-top:14px; font-size:12px; color:#7b848f;">No obligation. Full confidentiality.</p>
     </div>
