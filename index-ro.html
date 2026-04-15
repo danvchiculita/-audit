@@ -45,7 +45,7 @@
        HEADER
     ========================= */
 
-   header {
+  header {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,8 +59,8 @@
     url('supermarket.jpg') center center / cover no-repeat;
   color: white;
   text-align: center;
-    padding: 96px 18px 64px;
-  }
+  padding: 110px 20px 90px;
+}
 
     .back-link {
       display: inline-flex;
@@ -250,9 +250,11 @@
         width: 100%;
         max-width: 320px;
       }
-
-    }
-
+@media (max-width: 768px) {
+  #hero-section {
+    padding: 96px 18px 64px;
+  }
+}
   </style>
 </head>
 <body>
